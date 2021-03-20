@@ -19,6 +19,8 @@
   --communication-footer-color: rgb(255, 255, 255, 0.6);
   --color-text-btn: #ffffff;
   --btn-hover-color: #188ce8;
+  --social-primary-color: #afb1b8;
+  --social-second-color: #ffffff;
 }
 
 /* Сброс стилей для h1-h6, p */
@@ -155,10 +157,16 @@ body {
   text-decoration: none;
   color: currentColor;
 }
-.communication-header .link:hover,
+.mail::before {
+}
+
+.tell {
+}
+.communic ation-header .link:hover,
 .communication-header .link:focus {
   color: var(--accent-color); /* Синий цвет #2196F3 */
 }
+
 /* ================================================ */
 /* ================ОСНОВНАЯ СТРАНИЦА================================ */
 /* Основная секця */
@@ -253,6 +261,8 @@ body {
   border-bottom: 2px solid #a5a5a9;
   border-radius: 5px;
   background-color: var(--primary-background-color);
+  padding-left: 44px;
+  padding-right: 44px;
 }
 .container .command-list-item {
   width: calc(100% / 4 - 30px);
@@ -274,8 +284,35 @@ body {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+  margin-bottom: 16px;
+}
+.social-list {
+  display: flex;
+  justify-content: space-between;
+}
+.social-list-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 30px;
 }
+.social-list-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--social-primary-color);
+}
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+  fill: var(--social-second-color);
+}
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: var(--accent-color);
+}
+
 /* ================================================ */
 /* ===================ПОРТФОЛИО============================= */
 /* Страница Портфолио */
