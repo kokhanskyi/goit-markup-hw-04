@@ -10,6 +10,7 @@
   --primary-section-text-color: #ffffff;
   --primary-section-background-color: #2f303a;
   --footer-section-background-color: #2f303a;
+  --footer-social-background-color: rgba(255, 255, 255, 0.1);
   --title-text-color: #212121;
   --accent-color: #2196f3;
   --primary-background-color: #ffffff;
@@ -20,6 +21,7 @@
   --color-text-btn: #ffffff;
   --btn-hover-color: #188ce8;
   --social-primary-color: #afb1b8;
+  --regular-client-link-primary-color: #afb1b8;
   --social-second-color: #ffffff;
 }
 
@@ -125,10 +127,6 @@ body {
   display: inline-block;
   margin-right: 50px;
 }
-.communication-header .link {
-  display: inline-block;
-  margin-left: 50px;
-}
 
 .header {
   border-bottom: 1px solid #ececec;
@@ -148,21 +146,34 @@ body {
   color: var(--accent-color); /* Синий цвет #2196F3 */
 }
 /* Активная страница */
-.site-nav .link .current {
+.site-nav .link.current {
   color: var(--accent-color);
 }
 /* Коммуникация (шапка) */
 
+.communication-header li:not(:last-child) {
+  margin-right: 30px;
+}
 .communication-header .link {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: currentColor;
 }
-.mail::before {
+.communication-header-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
-
-.tell {
+.communication-header-container .link {
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
-.communic ation-header .link:hover,
+.communication-header-icon {
+  margin: 10px;
+}
+.communication-header .link:hover,
 .communication-header .link:focus {
   color: var(--accent-color); /* Синий цвет #2196F3 */
 }
@@ -214,6 +225,19 @@ body {
   display: flex;
   margin-left: -30px;
   margin-top: -30px;
+}
+.feature-logo {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  background-color: var(--second-background-color);
+  margin-bottom: 30px;
+}
+.feature-logo-icon {
+  width: 70px;
+  height: 70px;
+  padding: auto;
+  margin: auto;
 }
 .container .feature-list-item {
   width: calc(100% / 4 - 30px);
@@ -313,6 +337,39 @@ body {
   background-color: var(--accent-color);
 }
 
+/* Постоянные клиенты */
+.regular-client-list {
+  display: flex;
+  justify-content: space-between;
+}
+.regular-client-container {
+  display: flex;
+  width: 170px;
+  height: 90px;
+  justify-content: center;
+  align-items: center;
+  border: 10px;
+  border-color: var(--regular-client-link-primary-color);
+  border-radius: 4px;
+}
+.regular-client-list-item {
+  display: block;
+  width: 170px;
+  height: 90px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+/* display: flex;
+  width: 170px;
+  padding: 90px;
+  justify-content: center;
+  align-items: center;
+  border: 1px;
+  border-color: var(--regular-client-link-primary-color);
+  border-radius: 4px;
+} */
 /* ================================================ */
 /* ===================ПОРТФОЛИО============================= */
 /* Страница Портфолио */
@@ -349,9 +406,13 @@ body {
   margin-left: 30px;
   margin-top: 30px;
 }
+.portfoleo-project-list-item:hover {
+  box-shadow: 0px 4px 4px 0px #bfbfbf, 0px 4px 4px 0px #f0f0f0,
+    1px 4px 6px 0px #d9d9d9;
+  cursor: pointer;
+}
 .portfoleo-project-wapper {
   display: block;
-  /* flex-direction: column; */
   border: 1px solid #eeeeee;
   border-top: none;
   padding: 20px 24px;
@@ -418,12 +479,12 @@ footer {
   background-color: var(--footer-section-background-color);
 }
 footer .container {
-  display: block;
+  display: flex;
   padding: 60px 0;
 }
-footer p {
+/* footer p {
   padding-bottom: 10px;
-}
+} */
 /* Логотип в подвале */
 .logo-footer {
   font-family: 'Raleway', sans-serif;
@@ -444,14 +505,52 @@ footer p {
   padding-top: 20px;
 }
 /* Коммуникация (подвал) */
+footer {
+  display: flex;
+  justify-content: flex-start;
+}
 .communication-footer .link {
   font-size: 14px;
   line-height: 1.71;
   color: var(--communication-footer-color);
   text-decoration: none;
+  padding-top: 10px;
 }
 .communication-footer .link:hover,
 .communication-footer .link:focus {
   color: var(--accent-color); /* Синий цвет #2196F3 */
+}
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  width: 206px;
+  height: 80px;
+  margin-left: 70px;
+  margin-top: 12px;
+}
+.footer-social p {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-section-text-color);
+  margin-bottom: 20px;
+}
+.footer-social-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-social-list-item {
+  width: 44px;
+  height: 44px;
+  background-color: var(--footer-social-background-color);
+  border-radius: 50%;
+}
+.footer-social-list-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--logo-footer-color);
 }
 /* ================================================ */
