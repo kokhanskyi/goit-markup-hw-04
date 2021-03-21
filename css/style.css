@@ -94,6 +94,7 @@ body {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 /* ===Класс Секция */
@@ -260,7 +261,6 @@ body {
   display: flex;
   margin-left: -30px;
   margin-top: -30px;
-  padding-top: 62px;
   padding-bottom: 50px;
 }
 .container .business-list-item {
@@ -294,9 +294,6 @@ body {
   margin-top: 30px;
 }
 
-.command h2 {
-  margin-bottom: 50px;
-}
 .command h3 {
   font-weight: 500;
   font-size: 16px;
@@ -338,38 +335,25 @@ body {
 }
 
 /* Постоянные клиенты */
+
 .regular-client-list {
   display: flex;
   justify-content: space-between;
 }
-.regular-client-container {
+.regular-client-link {
   display: flex;
   width: 170px;
   height: 90px;
   justify-content: center;
   align-items: center;
-  border: 10px;
-  border-color: var(--regular-client-link-primary-color);
+  border: 1px solid var(--regular-client-link-primary-color);
   border-radius: 4px;
+  fill: var(--regular-client-link-primary-color);
 }
-.regular-client-list-item {
-  display: block;
-  width: 170px;
-  height: 90px;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
+.regular-client-link:hover {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
 }
-/* display: flex;
-  width: 170px;
-  padding: 90px;
-  justify-content: center;
-  align-items: center;
-  border: 1px;
-  border-color: var(--regular-client-link-primary-color);
-  border-radius: 4px;
-} */
 /* ================================================ */
 /* ===================ПОРТФОЛИО============================= */
 /* Страница Портфолио */
