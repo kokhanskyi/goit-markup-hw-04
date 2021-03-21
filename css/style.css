@@ -350,7 +350,8 @@ body {
   border-radius: 4px;
   fill: var(--regular-client-link-primary-color);
 }
-.regular-client-link:hover {
+.regular-client-link:hover,
+.regular-client-link:focus {
   fill: var(--accent-color);
   border-color: var(--accent-color);
 }
