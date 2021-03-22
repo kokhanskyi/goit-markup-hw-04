@@ -192,7 +192,7 @@ body {
     url(../images/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  min-width: 1600px;
+  width: 100%;
 }
 
 .hero-title {
@@ -438,7 +438,9 @@ body {
   background-color: var(--accent-color);
   margin: 0 auto;
   display: block;
+  border: 0px;
   border-radius: 5px;
+  padding: 10px 32px;
 }
 .hero-btn:hover,
 .hero-btn:focus {
